@@ -3,12 +3,12 @@ def dfs(i, sum):
   if i == n: return sum == k
 
   # a[i]を使わない場合
-  if dfs(i + 1, sum ): return True
+  if dfs(i + 1, sum): return True
 
   # a[i]を使う場合
   if dfs(i + 1, sum + a[i]): return True
 
-  # a[i]を使う使わないに拘らずkが作られないのでFalseを返す
+  # a[i]を使っても使わなくてもダメな場合Falseを返す
   return False
 
 
